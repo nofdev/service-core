@@ -9,9 +9,9 @@ repositories {
 }
 
 group = 'org.nofdev'
-version = '0.1.0-SNAPSHOT'
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+version = '1.0.0'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 [compileJava, compileTestJava, compileGroovy, compileTestGroovy]*.options*.encoding = 'UTF-8'
 
@@ -31,7 +31,7 @@ apply plugin: 'maven'
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "http://10.32.11.210:8081/nexus/content/repositories/snapshots/") {
+            repository(url: "http://10.32.11.210:8081/nexus/content/repositories/thirdparty/") {
                 authentication(userName: "deployment", password: "yintai.123")
             }
         }
