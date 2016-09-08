@@ -7,4 +7,5 @@ class ExceptionMessage {
     String msg;
     ExceptionMessage cause;
     String stack;
+    HashMap<String, ExceptionMessage> children
 }
