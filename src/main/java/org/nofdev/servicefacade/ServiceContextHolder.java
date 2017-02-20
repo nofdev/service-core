@@ -4,7 +4,7 @@ package org.nofdev.servicefacade;
  * Created by Qiang on 11/6/15.
  */
 public class ServiceContextHolder {
-    private static ThreadLocal<ServiceContext> threadLocal = new ThreadLocal<ServiceContext>() {
+    private static InheritableThreadLocal<ServiceContext> threadLocal = new InheritableThreadLocal<ServiceContext>() {
         @Override
         protected ServiceContext initialValue() {
             return new ServiceContext();
