@@ -23,7 +23,7 @@ public class ServiceContext extends HashMap<String, Object> {
      * 如果已经存在CallId就不创建，否则就创建
      * @return
      */
-    public CallId generatCallIdIfAbsente() {
+    public CallId generateCallIdIfAbsente() {
         if (get(CALLID) != null) {
             return (CallId) get(CALLID)
         } else {
