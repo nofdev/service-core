@@ -4,13 +4,13 @@ import groovy.transform.InheritConstructors
 import org.nofdev.servicefacade.AbstractBusinessException
 
 /**
- * Created by Liutengfei on 2016/4/21 0021.
+ * Created by Liutengfei on 2017/8/5 0005.
  */
 @InheritConstructors
-class AuthorizationException extends AbstractBusinessException {
-    static String DEFAULT_EXCEPTION_MESSAGE = "授权失败异常"
+class ParamsException extends AbstractBusinessException {
+    static String DEFAULT_EXCEPTION_MESSAGE = "无效的参数"
 
-    AuthorizationException() {
+    ParamsException() {
         super(DEFAULT_EXCEPTION_MESSAGE)
     }
 }

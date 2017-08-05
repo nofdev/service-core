@@ -6,7 +6,7 @@ package org.nofdev.servicefacade;
  * 所有业务系统能够捕获的异常都要转换为具体类型的业务逻辑异常抛出，如OrderNotFoundException
  */
 abstract class AbstractBusinessException<T> extends RuntimeException {
-    static String DEFAULT_EXCEPTION_MESSAGE = "业务逻辑异常";
+    static String DEFAULT_EXCEPTION_MESSAGE = "业务逻辑异常"
 
     T datail
 

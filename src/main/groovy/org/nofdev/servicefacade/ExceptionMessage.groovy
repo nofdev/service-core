@@ -4,9 +4,9 @@ package org.nofdev.servicefacade
  */
 class ExceptionMessage<T> {
     T datail
-    String name;
-    String msg;
-    ExceptionMessage cause;
-    String stack;
+    String name
+    String msg
+    ExceptionMessage cause
+    String stack
     HashMap<String, ExceptionMessage> children
 }

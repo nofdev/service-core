@@ -1,4 +1,6 @@
-package org.nofdev.servicefacade;
+package org.nofdev.servicefacade
+
+import groovy.transform.InheritConstructors;
 
 /**
  * 未知异常
@@ -9,22 +11,11 @@ package org.nofdev.servicefacade;
  * <p/>
  * 如果抛出这种异常，建议记录error级别的日志
  */
+@InheritConstructors
 class UnhandledException extends AbstractBusinessException {
-    static String DEFAULT_EXCEPTION_MESSAGE = "系统未知异常";
+    static String DEFAULT_EXCEPTION_MESSAGE = "系统未知异常"
 
     UnhandledException() {
         super(DEFAULT_EXCEPTION_MESSAGE)
-    }
-
-    UnhandledException(String message) {
-        super(message)
-    }
-
-    UnhandledException(String message, Throwable cause) {
-        super(message, cause)
-    }
-
-    UnhandledException(Throwable cause) {
-        super(cause)
     }
 }
