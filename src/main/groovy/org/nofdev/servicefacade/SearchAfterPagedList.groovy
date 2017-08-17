@@ -26,9 +26,9 @@ class SearchAfterPagedList<T> {
      * 本次查询的最后一条记录的定位值, 要跟排序字段一一对应, 要包含能唯一标识一条记录的字段. 用以滚动查询的 paginator 入参
      * 实际上应该是一个 tuple 类型
      */
-    List<Object> searchAfter
+    Object[] searchAfter
 
-    SearchAfterPagedList(long totalCount, int pageSize, List<Object> searchAfter, ArrayList<T> list) {
+    SearchAfterPagedList(long totalCount, int pageSize, Object[] searchAfter, ArrayList<T> list) {
         this.totalCount = totalCount
         this.searchAfter = searchAfter
         this.pageSize = pageSize

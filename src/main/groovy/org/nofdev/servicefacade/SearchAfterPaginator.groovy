@@ -17,7 +17,7 @@ class SearchAfterPaginator {
      * 上次查询的最后一条记录的定位值, 要跟排序字段一一对应, 要包含能唯一标识一条记录的字段. 如果为空是查第一页
      * 实际上应该是一个 tuple 类型
      */
-    List<Object> searchAfter
+    Object[] searchAfter
 
     int getPageSize() {
         return pageSize
@@ -31,12 +31,12 @@ class SearchAfterPaginator {
         paginator.setPageSize(pageSize)
         return paginator
     }
-    static SearchAfterPaginator page(List<Object> searchAfter) {
+    static SearchAfterPaginator page(Object[] searchAfter) {
         SearchAfterPaginator paginator = new SearchAfterPaginator()
         paginator.setSearchAfter(searchAfter)
         return paginator
     }
-    static SearchAfterPaginator page(List<Object> searchAfter, int pageSize) {
+    static SearchAfterPaginator page(Object[] searchAfter, int pageSize) {
         SearchAfterPaginator paginator = new SearchAfterPaginator()
         paginator.setSearchAfter(searchAfter)
         paginator.setPageSize(pageSize)
