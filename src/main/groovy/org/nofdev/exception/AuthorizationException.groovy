@@ -1,16 +1,38 @@
 package org.nofdev.exception
 
-import groovy.transform.InheritConstructors
 import org.nofdev.servicefacade.AbstractBusinessException
 
 /**
  * Created by Liutengfei on 2016/4/21 0021.
  */
-@InheritConstructors
 class AuthorizationException extends AbstractBusinessException {
     static String DEFAULT_EXCEPTION_MESSAGE = "授权失败异常"
 
     AuthorizationException() {
         super(DEFAULT_EXCEPTION_MESSAGE)
+    }
+
+    AuthorizationException(String message) {
+        super(message)
+    }
+
+    AuthorizationException(String message, Throwable cause) {
+        super(message, cause)
+    }
+
+    AuthorizationException(Throwable cause) {
+        super(cause)
+    }
+
+    AuthorizationException(String message, Object datail) {
+        super(message, datail)
+    }
+
+    AuthorizationException(String message, Throwable cause, Object datail) {
+        super(message, cause, datail)
+    }
+
+    AuthorizationException(Throwable cause, Object datail) {
+        super(cause, datail)
     }
 }
