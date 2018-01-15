@@ -8,8 +8,8 @@ class ActivationComparator<T> implements Comparator<T> {
      */
     @Override
     int compare(T o1, T o2) {
-        Activate p1 = o1.getClass().getAnnotation(Activate.class)
-        Activate p2 = o2.getClass().getAnnotation(Activate.class)
+        SpiMeta p1 = o1.getClass().getAnnotation(SpiMeta.class)
+        SpiMeta p2 = o2.getClass().getAnnotation(SpiMeta.class)
         if (p1 == null) {
             return 1
         } else if (p2 == null) {

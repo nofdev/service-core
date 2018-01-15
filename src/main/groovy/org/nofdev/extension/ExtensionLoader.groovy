@@ -168,7 +168,7 @@ class ExtensionLoader<T> {
         List<T> exts = new ArrayList<T>(extensionClasses.size())
 
         for (Map.Entry<String, Class<T>> entry : extensionClasses.entrySet()) {
-            Activate activation = entry.getValue().getAnnotation(Activate.class)
+            SpiMeta activation = entry.getValue().getAnnotation(SpiMeta.class)
             if (key == null || key.trim().length() == 0) {
                 exts.add(getExtension(entry.getKey()))
             } else if (activation != null && activation.key() != null) {
