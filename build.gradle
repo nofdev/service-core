@@ -5,7 +5,7 @@ repositories {
     jcenter()
     maven { url "http://repo.spring.io/snapshot" }
     maven { url "http://repo.spring.io/milestone" }
-    maven { url "http://10.32.11.210:8081/nexus/content/groups/public" }
+    maven { url "https://nexus.yintai.com/nexus/content/groups/public" }
 }
 
 group = 'org.nofdev'
@@ -16,6 +16,7 @@ targetCompatibility = 1.8
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:2.4.4"
+    compile 'org.slf4j:slf4j-api:1.7.25'
 }
 
 
@@ -158,7 +159,7 @@ publishing {
 //            }
 //        }
 //
-//        if (project.ext.pomFile.exists()) {
+//        if (project.extension.pomFile.exists()) {
 //            gpgPom(MavenPublication) {
 //                artifact(getPomSignature()) {
 //                    classifier = null

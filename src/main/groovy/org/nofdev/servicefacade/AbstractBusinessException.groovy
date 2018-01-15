@@ -8,7 +8,7 @@ package org.nofdev.servicefacade;
 abstract class AbstractBusinessException<T> extends RuntimeException {
     static String DEFAULT_EXCEPTION_MESSAGE = "业务逻辑异常"
 
-    T datail
+    T detail
 
     AbstractBusinessException() {
         super(DEFAULT_EXCEPTION_MESSAGE)
@@ -25,19 +25,19 @@ abstract class AbstractBusinessException<T> extends RuntimeException {
     AbstractBusinessException(Throwable cause) {
         super(cause)
     }
-    AbstractBusinessException(String message,T datail) {
+    AbstractBusinessException(String message,T detail) {
         super(message)
-        this.datail=datail
+        this.detail=detail
     }
 
-    AbstractBusinessException(String message, Throwable cause,T datail) {
+    AbstractBusinessException(String message, Throwable cause,T detail) {
         super(message, cause)
-        this.datail=datail
+        this.detail=detail
     }
 
-    AbstractBusinessException(Throwable cause,T datail) {
+    AbstractBusinessException(Throwable cause,T detail) {
         super(cause)
-        this.datail=datail
+        this.detail=detail
     }
 
 }
