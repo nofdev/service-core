@@ -2,10 +2,9 @@ apply plugin: 'java'
 apply plugin: 'groovy'
 apply plugin: 'idea'
 repositories {
+    mavenLocal()
+    mavenCentral()
     jcenter()
-    maven { url "http://repo.spring.io/snapshot" }
-    maven { url "http://repo.spring.io/milestone" }
-    maven { url "https://nexus.yintai.com/nexus/content/groups/public" }
 }
 
 group = 'org.nofdev'
