@@ -24,15 +24,15 @@ class AuthorizationException extends AbstractBusinessException {
         super(cause)
     }
 
-    AuthorizationException(String message, Object datail) {
-        super(message, datail)
+    AuthorizationException(String message, Object detail) {
+        super(message, detail)
     }
 
-    AuthorizationException(String message, Throwable cause, Object datail) {
-        super(message, cause, datail)
+    AuthorizationException(String message, Throwable cause, Object detail) {
+        super(message, cause, detail)
     }
 
-    AuthorizationException(Throwable cause, Object datail) {
-        super(cause, datail)
+    AuthorizationException(Throwable cause, Object detail) {
+        super(cause, detail)
     }
 }

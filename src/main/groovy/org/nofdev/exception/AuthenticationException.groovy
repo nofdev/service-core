@@ -24,15 +24,15 @@ class AuthenticationException extends AbstractBusinessException {
         super(cause)
     }
 
-    AuthenticationException(String message, Object datail) {
-        super(message, datail)
+    AuthenticationException(String message, Object detail) {
+        super(message, detail)
     }
 
-    AuthenticationException(String message, Throwable cause, Object datail) {
-        super(message, cause, datail)
+    AuthenticationException(String message, Throwable cause, Object detail) {
+        super(message, cause, detail)
     }
 
-    AuthenticationException(Throwable cause, Object datail) {
-        super(cause, datail)
+    AuthenticationException(Throwable cause, Object detail) {
+        super(cause, detail)
     }
 }

@@ -24,15 +24,15 @@ class ParamsException extends AbstractBusinessException {
         super(cause)
     }
 
-    ParamsException(String message, Object datail) {
-        super(message, datail)
+    ParamsException(String message, Object detail) {
+        super(message, detail)
     }
 
-    ParamsException(String message, Throwable cause, Object datail) {
-        super(message, cause, datail)
+    ParamsException(String message, Throwable cause, Object detail) {
+        super(message, cause, detail)
     }
 
-    ParamsException(Throwable cause, Object datail) {
-        super(cause, datail)
+    ParamsException(Throwable cause, Object detail) {
+        super(cause, detail)
     }
 }

@@ -21,15 +21,15 @@ class BatchException extends AbstractBusinessException {
         super(cause)
     }
 
-    BatchException(String message, Object datail) {
-        super(message, datail)
+    BatchException(String message, Object detail) {
+        super(message, detail)
     }
 
-    BatchException(String message, Throwable cause, Object datail) {
-        super(message, cause, datail)
+    BatchException(String message, Throwable cause, Object detail) {
+        super(message, cause, detail)
     }
 
-    BatchException(Throwable cause, Object datail) {
-        super(cause, datail)
+    BatchException(Throwable cause, Object detail) {
+        super(cause, detail)
     }
 }
