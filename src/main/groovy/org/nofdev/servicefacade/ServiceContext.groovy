@@ -17,16 +17,16 @@ public class ServiceContext extends HashMap<String, Object> {
     }
 
     public String getUserdata(String key) {
-        if (this.get("${PREFIX}-${key}")) {
-            this.get("${PREFIX}-${key}")
+        if (this.get("${PREFIX}-${key}".toString())) {
+            this.get("${PREFIX}-${key}".toString())
         } else {
             this.get("${PREFIX.toLowerCase()}-${key}")
         }
     }
 
     public void removeUserData(String key) {
-        this.remove("${PREFIX}-${key}")
-        this.remove("${PREFIX.toLowerCase()}-${key}")
+        this.remove("${PREFIX}-${key}".toString())
+        this.remove("${PREFIX.toLowerCase()}-${key}".toString())
     }
 
     public HashMap<String, Object> getUserDataMap() {
