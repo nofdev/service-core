@@ -8,51 +8,54 @@ class Paginator {
     /**
      * 默认条目数
      */
-    static final int DEFAULT_PAGE_SIZE = 10;
+    static final int DEFAULT_PAGE_SIZE = 10
     /**
      * 默认第一页的页码
      */
-    static final int DEFAULT_FIRST_PAGE = 1;
+    static final int DEFAULT_FIRST_PAGE = 1
     /**
      * 每页显示多少条记录
      */
-    int pageSize = Paginator.DEFAULT_PAGE_SIZE;
+    int pageSize = Paginator.DEFAULT_PAGE_SIZE
     /**
      * 当前页码
      */
-    long page = Paginator.DEFAULT_FIRST_PAGE;
-
+    long page = Paginator.DEFAULT_FIRST_PAGE
+    /**
+     * 排序
+     */
+    List<Sort> sort
 
     int getPageSize() {
-        return pageSize;
+        return pageSize
     }
 
     void setPageSize(int pageSize) {
-        this.pageSize = pageSize < 1 ? 1 : pageSize;
+        this.pageSize = pageSize < 1 ? 1 : pageSize
     }
 
     long getPage() {
-        return page;
+        return page
     }
 
     void setPage(long page) {
-        this.page = page;
+        this.page = page
     }
 
     long offset() {
-        return (page - 1) * pageSize;
+        return (page - 1) * pageSize
     }
 
     static Paginator page(long page) {
-        Paginator paginator = new Paginator();
-        paginator.setPage(page);
-        return paginator;
+        Paginator paginator = new Paginator()
+        paginator.setPage(page)
+        return paginator
     }
 
     static Paginator page(long page, int pageSize) {
-        Paginator paginator = new Paginator();
-        paginator.setPage(page);
-        paginator.setPageSize(pageSize);
-        return paginator;
+        Paginator paginator = new Paginator()
+        paginator.setPage(page)
+        paginator.setPageSize(pageSize)
+        return paginator
     }
 }
