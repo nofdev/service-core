@@ -20,7 +20,7 @@ public class ServiceContext extends HashMap<String, Object> {
         if (this.get("${PREFIX}-${key}")) {
             this.get("${PREFIX}-${key}")
         } else {
-            this.get("${PREFIX.toLowerCase()} - ${key}")
+            this.get("${PREFIX.toLowerCase()}-${key}")
         }
     }
 
