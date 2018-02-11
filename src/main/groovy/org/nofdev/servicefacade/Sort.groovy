@@ -1,9 +1,17 @@
 package org.nofdev.servicefacade
 
 /**
- * Created by Qiang on 2/29/16.
+ * Created by Liutengfei on 2018/2/9
  */
-class Sort<T> {
-    List<SortOrder<T>> sortOrders
-    //TODO 需要支持 direction 默认值和直接传入 field 列表
+class Sort {
+    Sort(String field, Direction direction) {
+        this.field = field
+        this.direction = direction
+    }
+
+    Sort() {
+    }
+
+    String field
+    Direction direction
 }

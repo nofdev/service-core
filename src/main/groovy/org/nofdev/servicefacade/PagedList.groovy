@@ -11,6 +11,14 @@ import groovy.transform.CompileStatic
 class PagedList<T> {
 
     /**
+     * 是不是首页
+     */
+    boolean first
+    /**
+     * 是不是末页
+     */
+    boolean last
+    /**
      * 总页数
      */
     long totalPage
@@ -29,21 +37,21 @@ class PagedList<T> {
     /**
      * 信息列表
      */
-    ArrayList<T> list
+    List<T> list
 
     @Deprecated
     PagedList() {
 
     }
 
-    PagedList(long totalCount, long currentPage, int pageSize, ArrayList<T> list) {
+    PagedList(long totalCount, long currentPage, int pageSize, List<T> list) {
         this.totalCount = totalCount
         this.currentPage = currentPage
         this.pageSize = pageSize
         this.list = list
     }
 
-    PagedList(long totalCount, Paginator paginator, ArrayList<T> list) {
+    PagedList(long totalCount, Paginator paginator, List<T> list) {
         this.totalCount = totalCount
         this.currentPage = paginator.page
         this.pageSize = paginator.pageSize
@@ -58,10 +66,10 @@ class PagedList<T> {
                 totalPage = this.totalCount % this.pageSize > 0 ? ((this.totalCount / this.pageSize).setScale(0, BigDecimal.ROUND_FLOOR)).longValue() + 1L : ((this.totalCount / this.pageSize).setScale(0, BigDecimal.ROUND_FLOOR)).longValue()
             }
         }
-        return totalPage;
+        return totalPage
     }
 
     static <E> PagedList<E> wrap(Collection<E> collection) {
-        return new PagedList<E>(collection.size(), Paginator.page(1, collection.size()), collection as ArrayList);
+        return new PagedList<E>(collection.size(), Paginator.page(1, collection.size()), collection as List)
     }
 }
