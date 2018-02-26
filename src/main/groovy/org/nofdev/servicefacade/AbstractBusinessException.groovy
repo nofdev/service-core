@@ -9,6 +9,7 @@ abstract class AbstractBusinessException<T> extends RuntimeException {
     static String DEFAULT_EXCEPTION_MESSAGE = "业务逻辑异常"
 
     T detail
+    T datail
 
     AbstractBusinessException() {
         super(DEFAULT_EXCEPTION_MESSAGE)
@@ -25,19 +26,23 @@ abstract class AbstractBusinessException<T> extends RuntimeException {
     AbstractBusinessException(Throwable cause) {
         super(cause)
     }
-    AbstractBusinessException(String message,T detail) {
+
+    AbstractBusinessException(String message, T detail) {
         super(message)
-        this.detail=detail
+        this.detail = detail
+        this.datail = detail
     }
 
-    AbstractBusinessException(String message, Throwable cause,T detail) {
+    AbstractBusinessException(String message, Throwable cause, T detail) {
         super(message, cause)
-        this.detail=detail
+        this.detail = detail
+        this.datail = detail
     }
 
-    AbstractBusinessException(Throwable cause,T detail) {
+    AbstractBusinessException(Throwable cause, T detail) {
         super(cause)
-        this.detail=detail
+        this.detail = detail
+        this.datail = detail
     }
 
 }
