@@ -9,6 +9,7 @@ abstract class AbstractBusinessException<T> extends RuntimeException {
     static String DEFAULT_EXCEPTION_MESSAGE = "业务逻辑异常"
 
     T detail
+    @Deprecated
     T datail
 
     AbstractBusinessException() {
