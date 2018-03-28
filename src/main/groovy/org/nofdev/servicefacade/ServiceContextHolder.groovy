@@ -19,7 +19,7 @@ public class ServiceContextHolder {
         return threadLocal.get();
     }
 
-    public static void itgg(){
+    public static void clearContext(){
         setServiceContext(new ServiceContext())
     }
 }
